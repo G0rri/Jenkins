@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    environment {
+        ROOT_PASSWORD = credentials('mariadb-secret')
+    }
+    stages {
+        stage('Limpieza') {
+            steps {
+                dir('proyecto') {
+                sh 'docker compose down --remove-orphans'
+                }
+            }
+        }
+        stage('Despliegue seguro') {
+            steps {
+                dir('proyecto') {
+                sh 'docker compose up --build -d'
+                }
+            }
+        }
+    }
+}
