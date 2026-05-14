@@ -1,7 +1,6 @@
 <?php
 $host = 'db'; 
 $user = 'root';
-// Se lee la contraseña mediante el método getenv
 $pass = getenv('ROOT_PASSWORD'); 
 $db = 'mysql';
 
