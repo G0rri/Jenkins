@@ -1,6 +1,6 @@
 # Jenkins – Pipeline CI/CD con Docker
 
-Práctica de la asignatura [PPS], CIB.
+Práctica del módulo Puesta en Producción Segura (PPS), CIB.
 
 Pipeline de Jenkins que construye una imagen Docker con una aplicación PHP
 y la despliega automáticamente con Docker Compose.
